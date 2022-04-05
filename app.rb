@@ -22,23 +22,6 @@ post '/send' do
     password: SecureRandom.urlsafe_base64(5)
   )
   redirect '/send_verification/' + params[:user_hash].to_s()
-  # password=Card.find_by(hash: params[:user_hash]).password
-  # Pony.mail(
-  #   :from => 'lot.uni.qiita@gmail.com',
-  #   :to => params[:email],
-  #   :subject => "combuカード認証メール",
-  #   :html_body => "このメールはcombuカード認証のためのメールです。<a href=http://localhost:55007/auth/うんち>こちら</a>から認証を行ってください。",
-  #   :via => :smtp,
-  #   :via_options => { 
-  #     :address             => 'smtp.gmail.com', 
-  #     :port                 => '587', 
-  #     :user_name            => 'lot.uni.qiita@gmail.com', 
-  #     :password             => 'svkbscajvjnngfdz', 
-  #     :authentication       => :plain,
-  #     :enable_starttls_auto => false,
-  #     :openssl_verify_mode  => OpenSSL::SSL::VERIFY_NONE
-  # })
-  # redirect '/send_verification/'+params[:user_hash]
 end
 
 get '/admin' do
@@ -53,7 +36,7 @@ get "/send_verification/:hash" do
     :from => 'lot.uni.qiita@gmail.com',
     :to => @email,
     :subject => "combuカード認証メール",
-    :html_body => 'このメールはcombuカード認証のためのメールです。<br>認証を完了したい場合は以下のリンクをクリックして下さい<a href="http://localhost:55007/auth/'+@card.md5+'/'+@card.password+'">http://localhost:55007/auth/'+@card.md5+'/'+@card.password+'</a>',
+    :html_body => 'このメールはcombuカード認証のためのメールです。<br>認証を完了したい場合は以下のリンクをクリックして下さい<a href="https://card.combu.dev/auth/'+@card.md5+'/'+@card.password+'">https://card.combu.dev/auth/'+@card.md5+'/'+@card.password+'</a>',
     :via => :smtp,
     :via_options => { 
       :address             => 'smtp.gmail.com', 
