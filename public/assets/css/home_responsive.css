@@ -1,0 +1,39 @@
+@media screen and (max-width: 1240px){
+    .intro_step{
+        padding: 30px 10px;
+    }
+}
+@media screen and (max-width: 1100px){
+    .clear{
+        display: none;
+    }
+}
+@media screen and (max-width: 942px){
+    .flex_clear{
+        display: block;
+    }
+    .width_33{
+        width: 80%;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 870px){
+    #form_flame{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 802px){
+    .flex{
+        display: block;
+    }
+}
+@media screen and (max-width: 550px){
+    #form_flame{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 516px){
+    .card_image{
+        width: 80%;
+    }
+}

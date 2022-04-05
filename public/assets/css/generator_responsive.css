@@ -1,0 +1,40 @@
+@media screen and (max-width: 920px){
+    .flex{
+        display: block;
+        height: 620px;
+    }
+}
+@media screen and (max-width: 587px){
+    #user_hash{
+        top: 258px;
+    }
+    #user_name{
+        top: 369px;
+    }
+    #dk-identicon{
+        top: 294px;
+    }
+}
+@media screen and (max-width: 500px){
+    .intro_flame{
+        padding: 10px;
+    }
+    form{
+        margin: 10px;
+    }
+    #user_hash{
+        top: 238px;
+        left: 268px;
+    }
+    #user_name{
+        top: 350px;
+        left: 320px;
+    }
+    #dk-identicon{
+        top: 278px;
+        left: 89px;
+    }
+    #end{
+        padding: 10px;
+    }
+}

@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+}
+#intro_content{
+    background-color: #a6e2d9;
+}
+#card_form{
+    background-color: #63d3c2;
+}
+.title{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+.flex{
+    display: flex;
+}
+.card_image{
+    width: 450px;
+    height: auto;
+    border-radius: 60px;
+}
+.intro_flame{
+    padding:30px;
+}
+.intro_step{
+    padding:60px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+.width_33{
+    width: 33%;
+    border: 1px solid;
+    margin: 0px 10px;
+}
+.center{
+    text-align: center;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+#card_form{
+    padding: 30px;
+}
+#form_flame{
+    width: 800px;
+    height: 200px;
+    border: 1px solid;
+    border-radius: 30px;
+    margin: 30px auto;
+}
+p{
+    color:#1b1b1b;
+    font-weight: bold;
+    font-size: 1em;
+}
+.form_link{
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    padding: 15px 20px;
+    width: 200px;
+    display: block;
+    background-color: #1b1b1b;
+    margin: 30px auto;
+}

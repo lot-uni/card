@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+}
+body{
+    background-color: #a6e2d9;
+}
+.end{
+    color:#1b1b1b;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 30px;
+}
+.title{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+.title_flame{
+    padding: 30px;
+}
+.flex{
+    display: flex;
+}
+.card_image{
+    width: 450px;
+    height: auto;
+    border-radius: 60px;
+}
+.intro_flame{
+    padding:30px;
+}
+#user_hash{
+    font-size: 7px;
+    width: 140px;
+    position: absolute;
+    top: 197px;
+    left: 290px;
+}
+#user_name{
+    font-size: 16px;
+    width: 140px;
+    position: absolute;
+    top: 308px;
+    left: 342px;
+}
+#dk-identicon{
+    position: absolute;
+    left: 105px;
+    top: 235px;
+}
+form{
+    margin: 30px;
+    padding: 0px 30px;
+    height: 230px;
+    border: #05bea2 2px solid;
+    border-radius: 20px;
+}
+input[type="text"]{
+    width: 290px;
+}

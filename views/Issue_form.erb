@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/assets/img/combu_logo.png">
+  <title>カード発行</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/lssue.css">
+  <link rel="stylesheet" href="/assets/css/generator_responsive.css">
+  <script type="text/javascript" src="/assets/js/md5.js"></script>
+  <script type="text/javascript" src="/assets/js/generator.js"></script>
+</head>
+<body>
+<div class="header">
+</div>
+<h1 class="title title_flame">COMBUカード発行フォーム</h1>
+<div id="intro_content">
+  <div class="flex">
+    <img class="intro_flame card_image" src="/assets/img/card.png" alt="combuカードのイメージ">
+    <div id="dk-identicon"></div>
+    <p id="user_hash">1d93f5951e4516dd14f155f251b82d7d</p>
+    <p id="user_name"></p>
+    <form method="post" action="/send" name="contactForm">
+        <input type="hidden" name="user_hash" value="1d93f5951e4516dd14f155f251b82d7d">
+        <label for="fname" required>名前</label><br>
+        <input type="text" id="input_name" name="name" placeholder="lot-uni" required><br>
+        <label>メールアドレス</label><br>
+        <input type="text" id="mail" name="email" placeholder="combu@combu.dev" required><br>
+        <label>住所</label><br>
+        <input type="text" id="fname" name="address" placeholder="〒163-8001東京都新宿区西新宿二丁目８番１号" required><br>
+        <label>誕生日</label><br>
+        <input type="date" id="fname" name="birth" required><br>
+        <input type="submit" value="送信" id="submit" disabled>
+    </form>
+  </div>
+  <p class="end">© 2022 Combu_uni.</p>
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="/assets/js/identicon_canvas.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.identicon5.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.md5.min.js"></script>
+<script type="text/javascript" src="/assets/js/mydenticon.js"></script>
+</body>
+</html>
