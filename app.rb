@@ -13,15 +13,19 @@ get '/Issue_form' do
 end
 
 post '/send' do
-  Card.create(
-    name: params[:name],
-    email: params[:email],
-    address: params[:address],
-    birth: params[:birth],
-    md5: params[:user_hash].to_s(),
-    password: SecureRandom.urlsafe_base64(5)
-  )
-  redirect '/send_verification/' + params[:user_hash].to_s()
+  if Card.where(email: params[:email]).first.nil? || Card.where(email: params[:email]).first.authc == false
+    Card.create(
+      name: params[:name],
+      email: params[:email],
+      address: params[:address],
+      birth: params[:birth],
+      md5: params[:user_hash].to_s(),
+      password: SecureRandom.urlsafe_base64(5)
+    )
+    redirect '/send_verification/' + params[:user_hash].to_s()
+  else
+    redirect '/Issue_form'
+  end
 end
 
 # get '/admin' do
@@ -51,17 +55,22 @@ get "/send_verification/:hash" do
 end
 
 get '/auth/:md5/:password' do
-  @card = Card.where(md5: params[:md5]).first
-  if @card.password == params[:password]
-    @card.update(status: "認証済")
-    @cards = Card.where(md5: params[:md5]).first
-    if @cards.authc!=true
+  if !Card.where(md5: params[:md5]).first.nil?
+    @card = Card.where(md5: params[:md5]).first
+    if @card.password == params[:password] && Card.where(authc: true).where(email: @card.email).first.nil?
+      @card.update(status: "認証済")
       @card.update(authc: true)
+    end
+    if @card.password == params[:password] && !Card.where(authc: true).where(email: @card.email).first.nil?
+      "このメールアドレスはすでに使われています。"
+    end
+    if @card.password == params[:password]&&@card.authc == true
+      @cards = Card.where(md5: params[:md5]).first
       erb :show_status
     else
-      "無効なurlです"
+      "無効な認証リンクです。"
     end
   else
-    "無効なurlです"
+    "無効な認証リンクです。"
   end
 end
