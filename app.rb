@@ -56,7 +56,7 @@ get '/auth/:md5/:password' do
     @card.update(status: "認証済")
     @card.update(authc: true)
     @cards = Card.where(md5: params[:md5]).first
-    erb :admin
+    erb :show_status
   else
     "無効なurlです"
   end
