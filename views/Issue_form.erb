@@ -21,9 +21,9 @@
     <p id="user_hash">1d93f5951e4516dd14f155f251b82d7d</p>
     <p id="user_name"></p>
     <form method="post" action="/send" name="contactForm">
-        <input type="hidden" name="user_hash" value="1d93f5951e4516dd14f155f251b82d7d">
-        <label for="fname" required>名前</label><br>
-        <input type="text" id="input_name" name="name" placeholder="lot-uni" required><br>
+        <input type="hidden" name="user_hash" id="user_hash_hidden" value="1d93f5951e4516dd14f155f251b82d7d">
+        <label for="fname">名前</label><br>
+        <input type="text" id="input_name" name="name" placeholder="lot-uni" maxlength="15" required><br>
         <label>メールアドレス</label><br>
         <input type="text" id="mail" name="email" placeholder="combu@combu.dev" required><br>
         <label>住所</label><br>

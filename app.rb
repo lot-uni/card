@@ -24,10 +24,10 @@ post '/send' do
   redirect '/send_verification/' + params[:user_hash].to_s()
 end
 
-get '/admin' do
-  @cards = Card.all
-  erb :admin
-end
+# get '/admin' do
+#   @cards = Card.all
+#   erb :admin
+# end
 
 get "/send_verification/:hash" do
   @card = Card.where(md5: params[:hash]).first
@@ -54,9 +54,13 @@ get '/auth/:md5/:password' do
   @card = Card.where(md5: params[:md5]).first
   if @card.password == params[:password]
     @card.update(status: "認証済")
-    @card.update(authc: true)
     @cards = Card.where(md5: params[:md5]).first
-    erb :show_status
+    if @cards.authc!=true
+      @card.update(authc: true)
+      erb :show_status
+    else
+      "無効なurlです"
+    end
   else
     "無効なurlです"
   end

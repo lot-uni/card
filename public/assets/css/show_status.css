@@ -1,0 +1,18 @@
+h1,p{
+    text-align: center;
+}
+p{
+    font-size: 5px;
+}
+#intro_content{
+    width: 305px;
+    margin: auto;
+}
+.home{
+    display: block;
+    width: 100px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-decoration: none;
+}

@@ -1,9 +1,29 @@
-id:<%=@cards.id%><br>
-name:<%=@cards.name%><br>
-email:<%=@cards.email%><br>
-password:<%=@cards.password%><br>
-address:<%=@cards.address%><br>
-birth:<%=@cards.birth%><br>
-md5:<%=@cards.md5%><br>
-status:<%=@cards.status%><br>
-created_at:<%=@cards.created_at%>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/assets/img/combu_logo.png">
+  <title>カード発行</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/lssue.css">
+  <link rel="stylesheet" href="/assets/css/show_status.css">
+</head>
+<body>
+<div class="header">
+</div>
+<h1 class="title title_flame">COMBUカードの登録が完了しました。</h1>
+<p class="title">カードの登録情報</p>
+<div id="intro_content">
+    name:<%=@cards.name%><br>
+    email:<%=@cards.email%><br>
+    password:<%=@cards.password%><br>
+    address:<%=@cards.address%><br>
+    birth:<%=@cards.birth%><br>
+    md5:<%=@cards.md5%><br>
+    status:<%=@cards.status%><br>
+    created_at:<%=@cards.created_at%>
+</div>
+<a href="/" class="home">トップに戻る</a>
+<p class="end">© 2022 Combu_uni.</p>
+</body>
+</html>
